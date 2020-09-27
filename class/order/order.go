@@ -1,7 +1,11 @@
-package order
+package myorder
 
-type order struct {
+type Myorder struct {
 	Name        string
 	Description string
 	Price       string
+}
+
+func Add() {
+
 }
