@@ -2,16 +2,13 @@ package main
 
 import (
 	"fmt"
+	"gotraining/order"
 	"strings"
-
-	. "gotraining/gotraing/class/order"
 
 	"github.com/gocolly/colly"
 )
 
 func main() {
-
-	//var aaa = []string{}
 
 	c := colly.NewCollector(
 		colly.UserAgent("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"),
@@ -49,7 +46,7 @@ func subPage(subPageURL string) {
 	c.OnHTML("li li", func(e *colly.HTMLElement) {
 		//fmt.Println(e.DOM.Find("h4").Text())
 
-		orderData := Myorder{Name: "A", Description: "B", Price: "C"}
+		orderData := order.Myorder{Name: "A", Description: "B", Price: "C"}
 		header := e.DOM.Find("h4").Text()
 		text1 := e.DOM.Find("h4+div").Text()
 		text2 := e.DOM.Find("h4+div+div").Text()
