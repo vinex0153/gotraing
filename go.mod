@@ -1,4 +1,4 @@
-module gotraining/gotraing
+module gotraining
 
 go 1.15
 

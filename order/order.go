@@ -1,4 +1,4 @@
-package myorder
+package order
 
 type Myorder struct {
 	Name        string
